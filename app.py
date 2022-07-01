@@ -144,6 +144,8 @@ def h():
         rows=db.execute("SELECT * FROM watchlist WHERE user_id = (?)",(session["id"],))
         db.commit()
         return render_template("Watchlist.html",row=rows.fetchall())
+    if __name__ == "main":
+    app.run(debug=False,host='0,0,0,0')
 
 
 
